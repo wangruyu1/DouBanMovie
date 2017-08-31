@@ -12,13 +12,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.douban.movie.spider.constant.AppConstant;
-import com.douban.movie.spider.httpclient.HttpUtil;
+import com.douban.movie.spider.utils.HttpUtil;
 
-public abstract class AbstractMovieSpider implements Spider {
-	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractMovieSpider.class);
+public abstract class AbstractSpider implements Spider {
+	private static final Logger LOGGER = LoggerFactory.getLogger(AbstractSpider.class);
 	private Map<String, String> header = new HashMap<>();
 
-	public AbstractMovieSpider() {
+	public AbstractSpider() {
 		// header.put("Content-Type", "application/json; charset=UTF-8");
 	}
 

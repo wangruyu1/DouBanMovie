@@ -13,8 +13,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.douban.movie.spider.DouBanMovieApplication;
 import com.douban.movie.spider.entity.Movie;
-import com.douban.movie.spider.httpclient.HttpUtil;
 import com.douban.movie.spider.mapper.MovieMapper;
+import com.douban.movie.spider.utils.HttpUtil;
 import com.douban.movie.spider.utils.MD5Util;
 
 @RunWith(SpringRunner.class)
@@ -33,6 +33,10 @@ public class DouBanMovieApplicationTests {
 	}
 	@Test
 	public void test1(){
+		
+	}
+	
+	public static void main(String[] args) {
 	}
 
 }

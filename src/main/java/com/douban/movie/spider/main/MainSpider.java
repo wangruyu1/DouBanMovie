@@ -9,6 +9,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import com.douban.movie.spider.spider.MovieSpider;
+import com.douban.movie.spider.spider.MusicSpider;
 import com.douban.movie.spider.spider.Spider;
 
 @Component
@@ -17,20 +18,18 @@ public class MainSpider implements ApplicationRunner {
 
 	@Autowired
 	private MovieSpider movieSpider;
+	@Autowired
+	private MusicSpider musicSpider;
 
 	public void init() {
-		spiders.add(movieSpider);
-	}
-
-	public void run() {
-		init();
-		spiders.forEach(spider -> {
-			spider.spider();
-		});
+		spiders.add(musicSpider);
 	}
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		this.run();
+		init();
+		spiders.forEach(spider -> {
+			spider.spider();
+		});
 	}
 }

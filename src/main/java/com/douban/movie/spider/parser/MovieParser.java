@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.douban.movie.spider.entity.Movie;
+import com.douban.movie.spider.entity.Music;
 import com.douban.movie.spider.utils.RegexUtil;
 import com.google.gson.Gson;
 
@@ -53,6 +54,12 @@ public class MovieParser implements Parser<Movie> {
 			}
 		}
 		return movies;
+	}
+
+	@Override
+	public List<Music> parseForList(String pageTagUrl, Map<String, String> params) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

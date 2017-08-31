@@ -24,7 +24,7 @@ import com.douban.movie.spider.utils.MD5Util;
 import com.google.gson.Gson;
 
 @Component
-public class MovieSpider extends AbstractMovieSpider {
+public class MovieSpider extends AbstractSpider {
 	private static final Logger LOGGER = LoggerFactory.getLogger(MovieSpider.class);
 	private static String[] types = new String[] { "movie", "tv" };
 	private static final String TAG_URL = "https://movie.douban.com/j/search_tags";
