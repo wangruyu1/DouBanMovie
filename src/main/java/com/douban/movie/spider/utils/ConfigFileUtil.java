@@ -130,7 +130,7 @@ public class ConfigFileUtil {
 				}
 				userAgents.add(line);
 			}
-			LOGGER.error("读取useragent完成.");
+			LOGGER.info("读取useragent完成.");
 		} catch (Exception e) {
 			LOGGER.error("读取useragent错误.", e);
 		} finally {

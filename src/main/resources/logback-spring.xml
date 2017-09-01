@@ -21,6 +21,6 @@
 			<level>INFO</level>
 		</filter>
 	</appender> -->
-	<logger name="com.douban.movie.spider.mapper" level="DEBUG"></logger>
+<!-- 	<logger name="com.douban.movie.spider.mapper" level="DEBUG"></logger> -->
 
 </configuration>

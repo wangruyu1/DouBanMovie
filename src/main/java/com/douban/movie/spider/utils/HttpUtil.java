@@ -48,7 +48,7 @@ public class HttpUtil {
 	private static LaxRedirectStrategy redirectStrategy = null;
 	private static HttpRequestRetryHandler myRetryHandler = null;
 	private static SSLConnectionSocketFactory sslConnectionSocketFactory = null;
-	private static final int MAX_SLEEP_TIME = 100;
+	private static final int MAX_SLEEP_TIME = 20000;
 	private static final int REQUEST_MAX_TIMES_SHORT_TIME = 100;
 	private static final int FIX_SLEEP_TIME = 6000;
 

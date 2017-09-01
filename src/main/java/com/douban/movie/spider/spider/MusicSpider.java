@@ -107,16 +107,17 @@ public class MusicSpider extends AbstractSpider implements InitializingBean {
 			while (true) {
 				tmpPageTagUrl = pageTagUrl + pageStart;
 				pageStart += 20;
-				List<Music> musics = musicParser.parseForList(pageTagUrl, params);
+				List<Music> musics = musicParser.parseForList(tmpPageTagUrl, params);
 				// 暂时这么写
 				if (musics == null || musics.size() == 0) {
+					LOGGER.info("tagUrl=" + tagUrl + " startIndex=" + pageStart);
 					break;
 				}
 				for (Music m : musics) {
 					Music dbMusic = musicMapper.queryByUrlMd5(m.getUrlMd5());
 					if (dbMusic != null) {
-						m.setId(dbMusic.getId());
-						musicMapper.updateByPrimaryKey(m);
+						// m.setId(dbMusic.getId());
+						// musicMapper.updateByPrimaryKey(m);
 					} else {
 						musicMapper.insert(m);
 					}

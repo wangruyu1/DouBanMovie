@@ -40,6 +40,9 @@ public class MusicParser implements Parser<Music> {
 			try {
 				Music m = new Music();
 				m.setUrl(e.select("a.nbg").attr("href"));
+				if (m.getUrl() == null || "".equals(m.getUrl())) {
+					LOGGER.error("解析url失败.");
+				}
 				m.setUrlMd5(MD5Util.encode(m.getUrl()));
 				m.setImg(e.select("img").attr("src"));
 				m.setName(e.select("td[valign=top] a").text());
